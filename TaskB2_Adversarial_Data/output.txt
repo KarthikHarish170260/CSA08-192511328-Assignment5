@@ -19,7 +19,7 @@ TASK B2.1 — ADVERSARIAL FILE FORMAT STRESS TESTS
 
 [Test File]: missing_column.csv (Missing PM10/NO2 Columns)
   Description: File contains only 5 fields instead of 7 expected by telemetry schema.
-  [Schema Fault Trapped]: Missing required telemetry columns: {'no2', 'pm10'}.
+  [Schema Fault Trapped]: Missing required telemetry columns: {'pm10', 'no2'}.
   [Recovery Action]: Missing columns imputed as NULL; valid PM2.5 readings preserved.
 
 [Test File]: wrong_delimiter.csv (Semicolon Delimiters)
@@ -85,9 +85,9 @@ TASK B2 — ALTERNATIVE CONCEPT BENCHMARK: EXECUTEMANY() vs EXECUTE() IN A LOOP
 --------------------------------------------------------------------------------------
 Rows Inserted (N)   executemany() (ms)      execute() Loop (ms)     Speedup Factor    
 --------------------------------------------------------------------------------------
-100                 0.050                   0.207                   4.1               x
-1000                1.047                   1.989                   1.9               x
-10000               5.364                   23.150                  4.3               x
+100                 0.054                   0.422                   7.9               x
+1000                0.607                   2.563                   4.2               x
+10000               4.679                   30.498                  6.5               x
 --------------------------------------------------------------------------------------
 Technical Explanation of Speedup:
   executemany() wraps the entire batch inside a SINGLE database transaction BEGIN...COMMIT,

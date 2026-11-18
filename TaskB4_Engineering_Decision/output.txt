@@ -79,10 +79,10 @@ SELECT station, day, AVG(pm25), MAX(pm25)
     GROUP BY station, day;
 
 Execution Benchmark Results (100,000 Rows):
-  • Unindexed Full Table Scan:    3.730 ms (Scans all 100,000 rows in heap)
-  • B-Tree Index Creation Cost:   56.901 ms (One-time DDL setup)
-  • B-Tree Indexed Range Query:   0.280 ms (O(log N + k) point-to-point seek)
-  • Measured Query Acceleration:  13.3x Faster via Composite Index!
+  • Unindexed Full Table Scan:    3.964 ms (Scans all 100,000 rows in heap)
+  • B-Tree Index Creation Cost:   53.198 ms (One-time DDL setup)
+  • B-Tree Indexed Range Query:   0.325 ms (O(log N + k) point-to-point seek)
+  • Measured Query Acceleration:  12.2x Faster via Composite Index!
 
 ======================================================================================
 TASK B4.3 — FINAL PRODUCTION ENGINEERING DECISION (SCALING TO 100 STATIONS)

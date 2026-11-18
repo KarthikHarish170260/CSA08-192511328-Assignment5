@@ -16,9 +16,9 @@ TASK B3.2 — PERFORMANCE SCALING ACROSS DATA SIZES (1, 12, and 120 STATIONS)
 --------------------------------------------------------------------------------------------------
 Station Count   Total Rows      Python Loops (ms)     Pandas Groupby (ms)     SQL GROUP BY (ms)   
 --------------------------------------------------------------------------------------------------
-1               8,760           1.33                  3.91                    1.43                
-12              105,120         15.29                 33.03                   12.34               
-120             1,051,200       177.74                309.82                  154.64              
+1               8,760           1.28                  4.38                    1.00                
+12              105,120         15.79                 31.79                   13.46               
+120             1,051,200       171.30                314.07                  145.50              
 --------------------------------------------------------------------------------------------------
 
 ======================================================================================
@@ -26,12 +26,12 @@ TASK B3.3 — CPROFILE EXECUTION PROFILING OF PLAIN PYTHON PIPELINE
 ======================================================================================
 [✓] cProfile performance report written to C:\Users\karthik harish\.gemini\antigravity\scratch\CSA08-192511328-Assignment5\TaskB3_Loops_Libraries_SQL\cprofile_report.txt
 Top Callers and Time Consumption Breakdown:
-           2 function calls in 0.028 seconds
+           2 function calls in 0.029 seconds
   
      Ordered by: cumulative time
   
      ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-          1    0.028    0.028    0.028    0.028 C:\Users\karthik harish\.gemini\antigravity\scratch\CSA08-192511328-Assignment5\TaskB3_Loops_Libraries_SQL\task_b3_benchmark.py:188(run_plain_python_pipeline)
+          1    0.029    0.029    0.029    0.029 C:\Users\karthik harish\.gemini\antigravity\scratch\CSA08-192511328-Assignment5\TaskB3_Loops_Libraries_SQL\task_b3_benchmark.py:188(run_plain_python_pipeline)
           1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
   
   
